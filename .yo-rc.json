@@ -35,6 +35,9 @@
     "dtoSuffix": "DTO",
     "otherModules": [],
     "enableTranslation": false,
-    "blueprints": []
+    "blueprints": [],
+    "herokuAppName": "home-building-app",
+    "herokuDeployType": "git",
+    "herokuJavaVersion": "14"
   }
 }
