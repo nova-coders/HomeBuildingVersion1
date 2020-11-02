@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.novacoders.homebuilding"
+    },
+    "jhipsterVersion": "6.10.4",
+    "applicationType": "monolith",
+    "baseName": "HomeBuildingVersion1",
+    "packageName": "com.novacoders.homebuilding",
+    "packageFolder": "com/novacoders/homebuilding",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MWYzODRhOWU1ZDQwMGExNmQ1ZTQ1NzY0NTVmYWYyODc3ZGNkZTRkM2Y0Zjg1Yzg1ZDQwZjkyZTM2N2FlYjhlNWIzOWVjYzQxYWU1ZjExNTFmY2NlNmVmNThiOGUxY2MzN2U4YWRhZjQ2MjZmODA4MTY4NDc5ODcwMTM0NjM5YzA=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "cosmo",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1604274171415,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
