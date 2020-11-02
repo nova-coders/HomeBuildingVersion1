@@ -1,0 +1,11 @@
+id;url;seller_user_id;buyer_user_id;state;creation_date
+1;http://lucinda.org;42195;69771;true;2020-11-01T15:23:30
+2;http://art.info;23511;91237;false;2020-11-01T13:20:38
+3;https://marie.info;36424;82808;false;2020-11-01T06:11:06
+4;https://julius.net;78424;67685;true;2020-11-01T15:07:28
+5;https://gabe.org;16732;67056;false;2020-11-01T01:46:11
+6;http://terrance.name;75876;80663;true;2020-11-01T20:14:02
+7;https://america.biz;38296;6976;false;2020-11-01T06:09:42
+8;http://merl.name;73826;24099;false;2020-11-01T18:04:03
+9;http://ashtyn.biz;67682;74334;true;2020-11-01T19:33:10
+10;http://desmond.biz;64381;89722;true;2020-11-01T18:23:43

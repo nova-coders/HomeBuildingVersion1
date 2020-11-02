@@ -1,0 +1,110 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="property">
+            <h2><span>Property</span> {{ property.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Title</span></dt>
+                <dd>
+                    <span>{{ property.title }}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{ property.description }}</span>
+                </dd>
+                <dt><span>Price</span></dt>
+                <dd>
+                    <span>{{ property.price }}</span>
+                </dd>
+                <dt><span>Discount</span></dt>
+                <dd>
+                    <span>{{ property.discount }}</span>
+                </dd>
+                <dt><span>Land Square Meters</span></dt>
+                <dd>
+                    <span>{{ property.landSquareMeters }}</span>
+                </dd>
+                <dt><span>Area Square Meters</span></dt>
+                <dd>
+                    <span>{{ property.areaSquareMeters }}</span>
+                </dd>
+                <dt><span>Latitude</span></dt>
+                <dd>
+                    <span>{{ property.latitude }}</span>
+                </dd>
+                <dt><span>Longitude</span></dt>
+                <dd>
+                    <span>{{ property.longitude }}</span>
+                </dd>
+                <dt><span>Zoom</span></dt>
+                <dd>
+                    <span>{{ property.zoom }}</span>
+                </dd>
+                <dt><span>Address Text</span></dt>
+                <dd>
+                    <span>{{ property.addressText }}</span>
+                </dd>
+                <dt><span>Creation Date</span></dt>
+                <dd>
+                    <span>{{ property.creationDate }}</span>
+                </dd>
+                <dt><span>State</span></dt>
+                <dd>
+                    <span>{{ property.state }}</span>
+                </dd>
+                <dt><span>Sale</span></dt>
+                <dd>
+                    <div *ngIf="property.sale">
+                        <a [routerLink]="['/sale', property.sale?.id, 'view']">{{ property.sale?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span>Rent</span></dt>
+                <dd>
+                    <div *ngIf="property.rent">
+                        <a [routerLink]="['/rent', property.rent?.id, 'view']">{{ property.rent?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span>User Account</span></dt>
+                <dd>
+                    <div *ngIf="property.userAccount">
+                        <a [routerLink]="['/user-account', property.userAccount?.id, 'view']">{{ property.userAccount?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span>Money Type</span></dt>
+                <dd>
+                    <div *ngIf="property.moneyType">
+                        <a [routerLink]="['/money-type', property.moneyType?.id, 'view']">{{ property.moneyType?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span>Canton</span></dt>
+                <dd>
+                    <div *ngIf="property.canton">
+                        <a [routerLink]="['/canton', property.canton?.id, 'view']">{{ property.canton?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span>Property Category</span></dt>
+                <dd>
+                    <div *ngIf="property.propertyCategory">
+                        <a [routerLink]="['/property-category', property.propertyCategory?.id, 'view']">{{ property.propertyCategory?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/property', property.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

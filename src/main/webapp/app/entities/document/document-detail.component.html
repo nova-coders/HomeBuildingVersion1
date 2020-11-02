@@ -1,0 +1,64 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="document">
+            <h2><span>Document</span> {{ document.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Url</span></dt>
+                <dd>
+                    <span>{{ document.url }}</span>
+                </dd>
+                <dt><span>Seller User Id</span></dt>
+                <dd>
+                    <span>{{ document.sellerUserId }}</span>
+                </dd>
+                <dt><span>Buyer User Id</span></dt>
+                <dd>
+                    <span>{{ document.buyerUserId }}</span>
+                </dd>
+                <dt><span>State</span></dt>
+                <dd>
+                    <span>{{ document.state }}</span>
+                </dd>
+                <dt><span>Creation Date</span></dt>
+                <dd>
+                    <span>{{ document.creationDate }}</span>
+                </dd>
+                <dt><span>Seller</span></dt>
+                <dd>
+                    <div *ngIf="document.seller">
+                        <a [routerLink]="['/user-account', document.seller?.id, 'view']">{{ document.seller?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span>Buyer</span></dt>
+                <dd>
+                    <div *ngIf="document.buyer">
+                        <a [routerLink]="['/user-account', document.buyer?.id, 'view']">{{ document.buyer?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span>Property</span></dt>
+                <dd>
+                    <div *ngIf="document.property">
+                        <a [routerLink]="['/property', document.property?.id, 'view']">{{ document.property?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/document', document.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

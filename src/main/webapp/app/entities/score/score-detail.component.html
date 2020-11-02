@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="score">
+            <h2><span>Score</span> {{ score.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Rating</span></dt>
+                <dd>
+                    <span>{{ score.rating }}</span>
+                </dd>
+                <dt><span>Commentary</span></dt>
+                <dd>
+                    <span>{{ score.commentary }}</span>
+                </dd>
+                <dt><span>Creation Date</span></dt>
+                <dd>
+                    <span>{{ score.creationDate }}</span>
+                </dd>
+                <dt><span>State</span></dt>
+                <dd>
+                    <span>{{ score.state }}</span>
+                </dd>
+                <dt><span>User Account</span></dt>
+                <dd>
+                    <div *ngIf="score.userAccount">
+                        <a [routerLink]="['/user-account', score.userAccount?.id, 'view']">{{ score.userAccount?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span>Rent</span></dt>
+                <dd>
+                    <div *ngIf="score.rent">
+                        <a [routerLink]="['/rent', score.rent?.id, 'view']">{{ score.rent?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/score', score.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
